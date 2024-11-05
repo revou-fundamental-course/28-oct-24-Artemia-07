@@ -2,28 +2,75 @@
 main{
     display: flex;
     justify-content: space-around;
+    width: 100%;
 }
 
-/* input{
+.sectone{
+    margin-right: 75px;
+    width: 50%;
+}
 
-} */
+.secttwo{
+    margin-right: 75px;
+    width: 50%;
+}
+
+input{
+    display: flex;
+    flex-direction: column;
+    column-span: initial;
+    width: 100%;
+}
+
+div{
+    margin-bottom: 15px;
+}
+
+p{
+    text-align: left;
+    text-spacing-trim: trim-start;
+    text-size-adjust: auto;
+}
 
 form{
     background-color: aliceblue;
-    padding: 12px;
     border-radius: 8px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 15px;
+    padding-top: 15px;
 }
-
+button{
+    padding: 8px;
+    margin-top: 10px;
+}
 .btnhitung{
-    border: 1px solid gray;
+    border: 1px solid white;
     background-color: deepskyblue;
     color: white;
-    border-radius: 8px;
+    border-radius: 4px;
 }
+
 .btnreset{
     background: white;
     border: 1px solid gray;
-    border-radius: 8px;
+    border-radius: 4px;
+}
+
+.btndownload{
+    background-color: deepskyblue;
+    color: white;
+    border: 1px solid white;
+    border-radius: 4px;
+}
+
+.t1{
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+
+.t2{
+    text-align: center;
 }
 
 .color-section{
