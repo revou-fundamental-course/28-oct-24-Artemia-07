@@ -5,13 +5,13 @@ main{
     width: 100%;
 }
 
-.sectone{
-    margin-right: 75px;
+.sectOne{
+    margin-right: 60px;
     width: 50%;
 }
 
-.secttwo{
-    margin-right: 75px;
+.sectTwo{
+    margin-left: 60px;
     width: 50%;
 }
 
@@ -21,15 +21,19 @@ input{
     column-span: initial;
     width: 100%;
 }
+h2{
+    margin-bottom: 8px;
+}
 
+.ketentuan{
+    margin-top: 30px;
+}
 div{
     margin-bottom: 15px;
 }
 
 p{
     text-align: left;
-    text-spacing-trim: trim-start;
-    text-size-adjust: auto;
 }
 
 form{
@@ -44,20 +48,20 @@ button{
     padding: 8px;
     margin-top: 10px;
 }
-.btnhitung{
+.btnHitung{
     border: 1px solid white;
     background-color: deepskyblue;
     color: white;
     border-radius: 4px;
 }
 
-.btnreset{
+.btnReset{
     background: white;
     border: 1px solid gray;
     border-radius: 4px;
 }
 
-.btndownload{
+.btnDownload{
     background-color: deepskyblue;
     color: white;
     border: 1px solid white;
@@ -73,7 +77,7 @@ button{
     text-align: center;
 }
 
-.color-section{
+.colorSection{
     background-color: aliceblue;
     padding: 12px;
     border-radius: 8px;

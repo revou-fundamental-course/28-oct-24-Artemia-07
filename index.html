@@ -5,8 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document Alexandro</title>
     <link rel="stylesheet" href="css\styles.css">
-    <script src="28-oct-24-Artemia-07\js\script.js"></script>
-    
 </head>
 <body>
     <main>
@@ -26,28 +24,28 @@
 
             <form>
                 <div>
-                    <label for="jenis-kelamin">Jenis Kelamin</label>
+                    <label for="jenisKelamin">Jenis Kelamin</label>
                 </div>
                 <div>
-                    <label for="berat-badan">Berat Badan (kg):</label>
-                    <input id="berat-badan" type="number"/>
+                    <label for="beratBadan">Berat Badan (kg):</label>
+                    <input id="beratBadan" type="numbers">
                 </div>
                 <div>
                     <label for="usia">Usia (tahun):</label>
-                    <input id="usia" type="number"/>
+                    <input id="usia" type="numbers">
                 </div>
                 <div>
-                    <label for="tinggi-badan">Tinggi badan (cm):</label>
-                    <input id="tinggi-badan" type="number"/>
+                    <label for="tinggiBadan">Tinggi badan (cm):</label>
+                    <input id="tinggiBadan" type="numbers">
                 </div>
-                <button class="btnhitung">Hitung BMI</button>
-                <button class="btnreset">Reset</button>
+                <button class="btnHitung" type="button" onclick='hitungBMI()'>Hitung BMI</button>
+                <button class="btnReset" type="button" onclick='reset()'>Reset</button>
             </form>
 
             <div>
                 <!--Form Information-->
                 <header>
-                    <h2 style="margin-bottom: 8px;">Keunggulan Fitur</h2>
+                    <h2>Keunggulan Fitur</h2>
                 </header>
 
                 <article>
@@ -55,37 +53,39 @@
                     <p class="t1">2. Menentukan kategori berat badan ideal atau tidak</p>
                     <p class="t1">3. Mempersiapkan program penurunan berat badan</p>
 
-                    <p style="margin-top: 30px;">Kalkulator ini hanya boleh digunakan oleh bla bla bla</p>
+                    <p class="ketentuan">Kalkulator ini hanya boleh digunakan oleh bla bla bla</p>
 
-                    <p style="margin-top: 30px;">Kalkulator akan memberi anda gambaran bla bla bla</p>
+                    <p class="ketentuan">Kalkulator akan memberi anda gambaran bla bla bla</p>
                 </article>
             </div>
         </section>
 
         <!--Section Result-->
-        <section class="secttwo">
+        <section class="sectTwo">
             <header>
                 <h1>Hasil</h1>
             </header>
 
             <!--Hasil Kalkulasi-->
             <section>
-                <div class="color-section">
+                <div class="colorSection">
                     <p class="t2">Berat Badan Lebih</p>
-                    <p class="t2" id="result">24.5</p>
+                    <p class="t2" id="result"></p>
                     <p class="t2">Anda memiliki berat badan berlebih</p>
 
-                    <button class="btndownload">Download Hasil BMI</button>
+                    <button class="btnDownload">Download Hasil BMI</button>
                 </div>
             </section>
 
             <!--Info dari Hasil-->
             <article>
-                <p>Lexi Lore</p>
+                <p id="pesan"></p>
+
+                <p id="pesan"></p>
             </article>
 
             <section>
-                <div class="color-section">
+                <div class="colorSection">
                     <p class="t3">Beberapa penyakit yang berasal dari kegemukan</p>
                     <p class="t3">Diabetes</p>
                     <p class="t3">Hipertense</p>
@@ -94,6 +94,7 @@
                 </div>
             </section>
         </section>
+        <script src="./js/script.js"></script>
     </main>
 
     <footer>
