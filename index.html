@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document Alexandro</title>
+    <title>Kalkulator BMI</title>
     <link rel="stylesheet" href="css\styles.css">
+    <script src="./js/script.js"></script>
 </head>
-<body>
+<body id="mywebsite">
     <main>
     <!--Section Form-->
         <section  class="sectone">
@@ -24,22 +25,26 @@
 
             <form>
                 <div>
-                    <label for="jenisKelamin">Jenis Kelamin</label>
+                    <p for="jeniskelamin" id="jeniskelamin">Jenis Kelamin</p>
+                    <input type="radio" id="pria" class="gender" name="jeniskelamin" value="Pria" required>
+                    <label for="pria" id="jeniskelamin">Pria</label>
+                    <input type="radio" id="wanita" class="gender" name="jeniskelamin" value="Wanita" required>
+                    <label for="wanita" id="jeniskelamin">Wanita</label>
                 </div>
                 <div>
-                    <label for="beratBadan">Berat Badan (kg):</label>
-                    <input id="beratBadan" type="numbers">
+                    <label class="isian" for="beratbadan">Berat Badan (kg):</label>
+                    <input class="isian" id="beratbadan" type="numbers" required>
                 </div>
                 <div>
-                    <label for="usia">Usia (tahun):</label>
-                    <input id="usia" type="numbers">
+                    <label class="isian" for="usia">Usia (tahun):</label>
+                    <input class="isian" id="usia" type="numbers" required>
                 </div>
                 <div>
-                    <label for="tinggiBadan">Tinggi badan (cm):</label>
-                    <input id="tinggiBadan" type="numbers">
+                    <label class="isian" for="tinggibadan">Tinggi badan (cm):</label>
+                    <input class="isian" id="tinggibadan" type="numbers" required>
                 </div>
-                <button class="btnHitung" type="button" onclick='hitungBMI()'>Hitung BMI</button>
-                <button class="btnReset" type="button" onclick='reset()'>Reset</button>
+                <button id="tombol" type="submit" onclick=hitungbmi(event)>Hitung BMI</button>
+                <button class="btnreset" type="button" onclick=resetform()>Reset</button>
             </form>
 
             <div>
@@ -49,56 +54,70 @@
                 </header>
 
                 <article>
-                    <p class="t1">1. Menghitung berat bedan</p>
-                    <p class="t1">2. Menentukan kategori berat badan ideal atau tidak</p>
-                    <p class="t1">3. Mempersiapkan program penurunan berat badan</p>
+                    <p id="t1">1. Menghitung berat bedan</p>
+                    <p id="t1">2. Menentukan kategori berat badan ideal atau tidak</p>
+                    <p id="t1">3. Mempersiapkan program penurunan berat badan</p>
 
-                    <p class="ketentuan">Kalkulator ini hanya boleh digunakan oleh bla bla bla</p>
+                    <p class="ketentuan">Kalkulator ini hanya boleh digunakan oleh orang dewasa (wanita hamil atau menyusui 
+                        tidak disarankan untuk mengandalkan pembacaan BMI ini). Kalkulator ini menghitung berat badan anda
+                        (dalam kilogram) dibagi kuadrat dari tinggi badan anda (dalam meter) BMI=Kg/M<sup>2</sup>
+                    </p>
 
-                    <p class="ketentuan">Kalkulator akan memberi anda gambaran bla bla bla</p>
+                    <p class="ketentuan">Kalkulator ini akan memberi anda gambaran dalam 
+                        menghitung indeks massa tubuh seseorang berdasarkan berat badan dan tinggi badan.
+                        BMI membantu menentukan apakah seseorang berada dalam kategori berat badan ideal, kurus, kelebihan berat badan, atau obesitas.
+                    </p>
                 </article>
             </div>
         </section>
 
         <!--Section Result-->
-        <section class="sectTwo">
+        <section id="secttwo">
             <header>
                 <h1>Hasil</h1>
             </header>
 
             <!--Hasil Kalkulasi-->
             <section>
-                <div class="colorSection">
-                    <p class="t2">Berat Badan Lebih</p>
-                    <p class="t2" id="result"></p>
-                    <p class="t2">Anda memiliki berat badan berlebih</p>
+                <div class="colorsection">
+                    <p class="judul">Kategori Berat Badan Anda</p>
+                    <p class="t2" id="result">Hasil BMI</p>
 
-                    <button class="btnDownload">Download Hasil BMI</button>
+                    <button class="btndownload">Download Hasil BMI</button>
                 </div>
             </section>
 
             <!--Info dari Hasil-->
             <article>
-                <p id="pesan"></p>
+                <p id="pesansatu"></p>
 
-                <p id="pesan"></p>
+                <p id="pesandua"></p>
+
+                <p id="pesantiga"></p>
             </article>
 
+            <article>
+                <a href="https://ilmugiziku.com/2021/11/30/berbagai-aplikasi-gizi-mahasiswa-gizi-wajib-tahu/"><button id="tombol">Konsultasi Ahli Gizi via App</button></a>
+                <a href="https://gizikesehatan.ugm.ac.id/konsultasigizi-rey-ugm/"><button id="tombol">Registrasi Online Ahli Gizi</button></a>
+                <p>
+                    Perlu diingat, BMI tidak sepenuhnya mengukur kadar lemak tubuh dan tidak 
+                    selalu akurat untuk semua individu, seperti atlet atau orang dengan massa otot tinggi.
+                </p>
+            </article>
             <section>
-                <div class="colorSection">
-                    <p class="t3">Beberapa penyakit yang berasal dari kegemukan</p>
-                    <p class="t3">Diabetes</p>
-                    <p class="t3">Hipertense</p>
-                    <p class="t3">Sakit Jantung</p>
-                    <p class="t3">Osteoarthritis</p>
+                <div class="colorsection">
+                    <p class="judul">Beberapa penyakit yang berasal dari kegemukan</p>
+                    <p class="penyakit" id="t2">Diabetes</p>
+                    <p class="penyakit" id="t2">Hipertense</p>
+                    <p class="penyakit" id="t2">Sakit Jantung</p>
+                    <p class="penyakit" id="t2">Osteoarthritis</p>
                 </div>
             </section>
         </section>
-        <script src="./js/script.js"></script>
     </main>
 
     <footer>
-        <span>Made by Lexi Lore</span>
+        <span>Made by Alexandro Kessek</span>
     </footer>
 </body>
 </html>
