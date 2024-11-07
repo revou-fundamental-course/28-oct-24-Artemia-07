@@ -6,7 +6,19 @@ main{
     font-family: Arial, Helvetica, sans-serif;
 }
 
-.sectone{
+h2{
+    margin-bottom: 8px;
+}
+
+div{
+    margin-bottom: 15px;
+}
+
+p{
+    text-align: left;
+}
+
+#sectone{
     margin-right: 60px;
     width: 50%;
 }
@@ -28,28 +40,17 @@ main{
     accent-color: blue;
 }
 
-
 .isian{
     display: flex;
     flex-direction: column;
     column-span: initial;
     width: 100%;
 }
-h2{
-    margin-bottom: 8px;
-}
 
 .ketentuan{
     margin-top: 30px;
     letter-spacing: normal;
     word-break: normal;
-}
-div{
-    margin-bottom: 15px;
-}
-
-p{
-    text-align: left;
 }
 
 form{
@@ -60,10 +61,12 @@ form{
     padding-bottom: 15px;
     padding-top: 15px;
 }
+
 button{
     padding: 8px;
     margin-top: 10px;
 }
+
 #tombol{
     border: 1px solid white;
     background-color: deepskyblue;
@@ -94,15 +97,18 @@ button{
 #t2{
     text-align: center;
 }
+
 .judul{
     text-align: center;
     font-size: large;
 }
+
 .penyakit{
     margin: 0%;
     font-size: smaller;
     font-style: italic;
 }
+
 .t2{
     text-align: center;
     font-size: xx-large;

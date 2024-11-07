@@ -5,12 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kalkulator BMI</title>
     <link rel="stylesheet" href="css\styles.css">
-    <script src="./js/script.js"></script>
 </head>
 <body id="mywebsite">
     <main>
     <!--Section Form-->
-        <section  class="sectone">
+        <section  id="sectone">
             <div>
                 <header>
                     <h1>Kalkulator BMI</h1>
@@ -23,12 +22,12 @@
                 </article>
             </div>
 
-            <form>
+            <form id="formbmi">
                 <div>
                     <p for="jeniskelamin" id="jeniskelamin">Jenis Kelamin</p>
                     <input type="radio" id="pria" class="gender" name="jeniskelamin" value="Pria" required>
                     <label for="pria" id="jeniskelamin">Pria</label>
-                    <input type="radio" id="wanita" class="gender" name="jeniskelamin" value="Wanita" required>
+                    <input type="radio" id="wanita" class="gender" name="jeniskelamin" value="Wanita">
                     <label for="wanita" id="jeniskelamin">Wanita</label>
                 </div>
                 <div>
@@ -43,7 +42,7 @@
                     <label class="isian" for="tinggibadan">Tinggi badan (cm):</label>
                     <input class="isian" id="tinggibadan" type="numbers" required>
                 </div>
-                <button id="tombol" type="submit" onclick=hitungbmi(event)>Hitung BMI</button>
+                <button id="tombol" type="submit" onclick=hitungbmi()>Hitung BMI</button>
                 <button class="btnreset" type="button" onclick=resetform()>Reset</button>
             </form>
 
@@ -80,7 +79,7 @@
             <!--Hasil Kalkulasi-->
             <section>
                 <div class="colorsection">
-                    <p class="judul">Kategori Berat Badan Anda</p>
+                    <p class="judul" id="kategori">Kategori Berat Badan Anda</p>
                     <p class="t2" id="result">Hasil BMI</p>
 
                     <button class="btndownload">Download Hasil BMI</button>
@@ -119,5 +118,6 @@
     <footer>
         <span>Made by Alexandro Kessek</span>
     </footer>
+    <script src="./js/script.js"></script>
 </body>
 </html>
